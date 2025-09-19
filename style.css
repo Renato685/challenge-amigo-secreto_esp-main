@@ -1,0 +1,187 @@
+:root {
+    --color-bg: #0f0f1a;            /* Fondo oscuro */
+    --color-card: #1a1a2e;          /* Contenedores */
+    --color-primary: #00f5ff;       /* Cian neón */
+    --color-secondary: #ff00ff;     /* Magenta neón */
+    --color-accent: #00ff85;        /* Verde neón */
+    --color-text: #e0e0e0;          /* Texto claro */
+    --color-white: #ffffff;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top left, #1a1a2e, #0f0f1a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Orbitron", sans-serif;
+    color: var(--color-text);
+}
+
+/* Contenedor principal */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 800px;
+    background-color: var(--color-card);
+    border-radius: 24px;
+    box-shadow: 0 0 25px rgba(0, 245, 255, 0.3);
+    overflow: hidden;
+    border: 1px solid rgba(0, 245, 255, 0.4);
+}
+
+/* Banner superior */
+.header-banner {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    color: var(--color-white);
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-shadow: 0 0 10px var(--color-white), 0 0 20px var(--color-primary);
+}
+
+/* Sección de entrada */
+.input-section {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    text-shadow: 0 0 8px var(--color-primary);
+}
+
+/* Input y botón agregar */
+.input-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    margin: 15px 0;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+    border: 1px solid var(--color-secondary);
+}
+
+.input-name {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background: #0f0f1a;
+    color: var(--color-white);
+}
+
+.button-add {
+    background: var(--color-secondary);
+    color: var(--color-white);
+    font-weight: 600;
+    padding: 0 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-add:hover {
+    background: var(--color-primary);
+    box-shadow: 0 0 12px var(--color-primary);
+}
+
+/* Botones generales */
+button {
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-family: "Orbitron", sans-serif;
+}
+
+/* Botón de sorteo */
+.button-draw {
+    margin-top: 20px;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    box-shadow: 0 0 20px var(--color-accent);
+    text-transform: uppercase;
+}
+
+.button-draw:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: 0 0 25px var(--color-primary);
+}
+
+.button-draw img {
+    margin-right: 10px;
+}
+
+/* Lista de amigos */
+ul {
+    list-style: none;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto 0;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    border: 1px solid rgba(0, 245, 255, 0.2);
+    box-shadow: 0 0 8px rgba(0, 245, 255, 0.2);
+}
+
+/* Resultado */
+.result-list {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color-accent);
+    text-align: center;
+    text-shadow: 0 0 12px var(--color-accent);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .button-draw {
+        width: 100%;
+    }
+}
